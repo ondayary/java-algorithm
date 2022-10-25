@@ -1,2 +1,4 @@
-package com.likelion;public class Bracket {
+package com.likelion;
+
+public class Bracket {
 }

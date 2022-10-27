@@ -20,18 +20,27 @@ public class Marathon {
         String answer = "";
         HashMap<String, Integer> person = new HashMap<>();
 
-        // 동명이인이 있을 수 있음
         for (int i = 0; i < participant.length; i++) {
             String key = participant[i];
-            person.put(key, 1); // 1로 초기화
+
+            // 동명이인이 있을 수 있음
+//            person.put(key, 1); // 1로 초기화
+
+            // 바로 put을 할 수도 없고 숫자를 올리긴 해야해서
+            if(!person.containsKey(key)) {
+                person.put(key, 0);
+            }
+            person.put(key, person.get(key) + 1);
         }
 
         for (int i = 0; i < completion.length; i++) {
             String key = completion[i]; // 값을 찾는다.
-            person.put(key, 0); // 0으로
+//            person.put(key, 0); // 0으로
+
+            person.put(key, person.get(key) - 1);
         }
 
-        for(String key : person.keySet()) { // keySet: 키값만 가져오는 함수
+        for (String key : person.keySet()) { // keySet: 키값만 가져오는 함수
             if(person.get(key) == 1) { // 완주하지 못한 선수
                 return key;
             }

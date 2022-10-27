@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Marathon {
     // 참여선수 이름 배열 participant
     // 완주선수 이름 배열 completion
+    // completion = participant - 1
 
     public String solution(String[] participant, String[] completion) {
 

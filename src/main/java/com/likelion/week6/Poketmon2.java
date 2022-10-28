@@ -11,8 +11,24 @@ public class Poketmon2 {
     // nums/2 : 폰켓몬의 최대값
 
     public int solution(int[] nums) {
+
         int answer = 0;
-        return answer;
+        // 최대값 구하기
+        int max = nums.length / 2;
+
+        // 중복 제거하기
+        HashSet<Integer> set = new HashSet<>();
+
+        for(int num : nums) {
+            set.add(num);
+        }
+
+        // 중복을 제거한 set의 크기가 max보다 크면 max를, 작으면 size를 return
+        if(set.size() > max) {
+            return max;
+        } else {
+            return set.size();
+        }
     }
 
     public static void main(String[] args) {

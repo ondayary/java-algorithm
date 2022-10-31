@@ -17,20 +17,21 @@ public class MockTest {
         int secondAnswer = 0;
         int thirdAnswer = 0;
 
-        // 점수를 넣을 배열
-        int[] score = new int[3];
-
         for(int i = 0; i < answers.length; i++) {
             if(answers[i] == first[i % 5]) {
-                score[0]++;
+                firstAnswer++;
             }
             if(answers[i] == second[i % 8]) {
-                score[1]++;
+                secondAnswer++;
             }
             if(answers[i] == third[i % 10]) {
-                score[2]++;
+                thirdAnswer++;
             }
         }
+
+        // 가장 많은 문제를 맞힌 사람은 누구?
+        int max = Math.max(Math.max(firstAnswer, secondAnswer), thirdAnswer);
+
 
         System.out.println(firstAnswer);
 
@@ -39,6 +40,9 @@ public class MockTest {
 
     public static void main(String[] args) {
         // 1번 answer --> 5
+        // 2번 answer --> 0
 
+        MockTest mockTest = new MockTest();
+        mockTest.solution();
     }
 }

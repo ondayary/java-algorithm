@@ -1,22 +1,28 @@
 package com.likelion.week7;
 
+import javax.swing.plaf.nimbus.State;
+
+interface StatementStrategy {
+    boolean compare(int a, int b);
+}
+
 public class TemplateCallbackPrime {
 
     // Template, Callback → 함수를 매개변수(parameter)로 받고 싶을 때
     // → 특정 부분만 바뀌기 때문
     // i < num, i < num / 2, i * i <= num
 
-    boolean someOperation(int a, int b) {
-        return a < b;
-    }
+//    boolean someOperation(int a, int b) {
+//        return a < b;
+//    }
 
-    boolean isPrime(int num) {
+    boolean isPrime(int num, StatementStrategy stmt) {
         // i < num
         // i < num / 2
         // i * i < num
         // sqrt
 
-        for (int i = 2; someOperation(i, num); i++) {
+        for (int i = 2; stmt.compare(i, num); i++) {
             if(num % i == 0) return false;
         }
         return true;

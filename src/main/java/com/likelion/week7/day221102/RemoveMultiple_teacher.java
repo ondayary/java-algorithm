@@ -21,5 +21,21 @@ public class RemoveMultiple_teacher {
 
         System.out.println(nums);
         System.out.println(nums.size());
+
+        // 3의 배수 지우기 3제외
+        for(int i = 0; i < nums.size(); i++) {
+            if(nums.get(i) % 3 == 0 && nums.get(i) > 3) nums.remove(i);
+        }
+
+        System.out.println(nums);
+        System.out.println(nums.size());
+
+        // 4의 배수 지우기 4제외
+        for(int i = 0; i < nums.size(); i++) {
+            if(nums.get(i) % 4 == 0 && nums.get(i) > 4) nums.remove(i);
+        }
+
+        System.out.println(nums);
+        System.out.println(nums.size());
     }
 }

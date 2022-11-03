@@ -1,6 +1,7 @@
 package com.likelion.week7.day221103;
 
 import java.util.Arrays;
+import java.util.function.DoubleToIntFunction;
 
 public class Sosu {
 
@@ -22,6 +23,18 @@ public class Sosu {
     복사한 배열에 소수의 위치 check[i]를 false라고 변경 해놓고,
     2부터 주어진 수까지 반복하면서 자기자신을 제외한 자신의 배수를 nums에 포함하는 요소의 인덱스를 출력하라.
      */
+    public static void printNums(int[] nums, boolean[] checks) {
+        int cnt = 0;
+
+        for(int i = 0; i < checks.length; i++) {
+            if(checks[i]) {
+                System.out.printf("%d", nums[i]);
+                cnt++;
+            }
+        }
+        System.out.println();
+        System.out.println("size:"+cnt);
+    }
 
     public static void main(String[] args) {
 
@@ -32,7 +45,16 @@ public class Sosu {
 
         Arrays.fill(checks, true); // checks를 true로 초기화 cuz 기본값 false
         for(int i = 0; i < nums.length; i++) nums[i] = i + 2; // 2~50까지 nums에 채우기
+
+        // checks를 참고해서 true인 nums[i]만 출력한다.
+
+        // 2의 배수
+        int multipleOf = 2;
+        for(int i = 2; i < nums.length; i += 2) {
+            checks[i] = false;
         }
+
+        printNums(nums, checks);
     }
 
 }

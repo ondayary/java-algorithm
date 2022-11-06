@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="algorithm.SolveBracketTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-21T01:41:32" hostname="daonui-MacBookAir.local" time="0.038">
+  <properties/>
+  <testcase name="괄호가 잘 풀리는지" classname="algorithm.SolveBracketTest" time="0.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

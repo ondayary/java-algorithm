@@ -19,6 +19,11 @@ public class NumberArray {
             }
         }
 
+        // 만약에 떨어지는 원소가 없을 때 -1 반환
+        if(arrayList.isEmpty()) {
+            arrayList.add(-1);
+        }
+
         return answer;
     }
 }

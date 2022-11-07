@@ -1,6 +1,8 @@
 package com.likelion.week8;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class NumberArray {
 
@@ -23,6 +25,9 @@ public class NumberArray {
         if(arrayList.isEmpty()) {
             arrayList.add(-1);
         }
+
+        // 오름차순 정렬
+        Collections.sort(arrayList);
 
         return answer;
     }

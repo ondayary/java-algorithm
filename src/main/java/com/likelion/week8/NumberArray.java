@@ -1,5 +1,7 @@
 package com.likelion.week8;
 
+import java.util.ArrayList;
+
 public class NumberArray {
 
     // 프로그래머스 - 나누어 떨어지는 숫자 배열
@@ -8,6 +10,15 @@ public class NumberArray {
 
     public int[] solution(int[] arr, int divisor) {
         int[] answer = {};
+
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] % divisor == 0) { // 0 으로 나누어 떨어지면 배열 반환
+                arrayList.add(arr[i]);
+            }
+        }
+
         return answer;
     }
 }

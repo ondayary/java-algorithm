@@ -2,6 +2,7 @@ package com.likelion.week8;
 
 public class HashadNumber {
 
+    // 프로그래머스 - 하샤드 수
     // step1. 자릿수의 합 구하기
     // step2. 나누어 떨어지는지 체크하기
 

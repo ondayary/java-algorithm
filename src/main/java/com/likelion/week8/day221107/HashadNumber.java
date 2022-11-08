@@ -1,4 +1,4 @@
-package com.likelion.week8;
+package com.likelion.week8.day221107;
 
 public class HashadNumber {
 

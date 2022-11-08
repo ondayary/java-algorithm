@@ -30,6 +30,8 @@ public class SearchData {
                 System.out.println(i);
                 break;
             }
+
+            // 찾지 못하면 -1 반환하는 로직 해야함
         }
     }
 }

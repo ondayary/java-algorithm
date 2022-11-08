@@ -22,6 +22,14 @@ public class SearchData {
             arr[i] = sc.nextInt();
         }
 
-        int result = -1;
+        // 세번째 줄에는 찾고자 하는 특정데이터를 입력한다.
+        int location = sc.nextInt();
+
+        for (int i = 0; i < number; i++) {
+            if(location == arr[i]) {
+                System.out.println(i);
+                break;
+            }
+        }
     }
 }

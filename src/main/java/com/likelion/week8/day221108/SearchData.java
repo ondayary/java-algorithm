@@ -29,9 +29,9 @@ public class SearchData {
             if(location == arr[i]) {
                 System.out.println(i);
                 break;
+            } else {
+                System.out.println(-1);
             }
-
-            // 찾지 못하면 -1 반환하는 로직 해야함
         }
     }
 }
